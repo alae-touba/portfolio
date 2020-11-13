@@ -20,8 +20,6 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
 
-		<link rel="stylesheet" type="text/css" href="node_modules/dialog-polyfill/dist/dialog-polyfill.css" />
-
 		<script src="assets/js/jquery-3.5.0.js" defer></script>
 		<script src="assets/js/popper.min.js" defer></script>
 		<script src="assets/js/bootstrap.min.js" defer></script>
@@ -51,7 +49,7 @@
 						</a>
 					</li>
 					<li id="resume-icon" class="tech-icon-wrapper social">
-						<a href="#" target="_blank" rel="noreferrer noopener">
+						<a href="assets/alae-touba-resume.pdf" target="_blank" rel="noreferrer noopener">
 							<img class="tech-icon" src="assets/img/resume.png" alt="Resume" />
 						</a>
 					</li>
@@ -229,10 +227,13 @@
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
 								<a
-									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent showVideoDialog"
+									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
 									rel="noreferrer noopener"
 									type="button"
 									data-upgraded=",MaterialButton,MaterialRipple"
+									data-toggle="modal"
+									data-target="#modalChatApp"
+									data-backdrop="false"
 									>VIDEO DEMO<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span
 								></a>
 								<a
@@ -310,10 +311,13 @@
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
 								<a
-									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent showVideoDialog"
+									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
 									rel="noreferrer noopener"
 									type="button"
 									data-upgraded=",MaterialButton,MaterialRipple"
+									data-toggle="modal"
+									data-target="#modalSocialNetwork"
+									data-backdrop="false"
 									>VIDEO DEMO<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span
 								></a>
 								<a
@@ -361,10 +365,13 @@
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
 								<a
-									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent showVideoDialog"
+									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
 									rel="noreferrer noopener"
 									type="button"
 									data-upgraded=",MaterialButton,MaterialRipple"
+									data-toggle="modal"
+									data-target="#modalPathfindingVisualisation"
+									data-backdrop="false"
 									>VIDEO DEMO<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span
 								></a>
 								<a
@@ -433,10 +440,13 @@
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
 								<a
-									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent showVideoDialog"
+									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
 									rel="noreferrer noopener"
 									type="button"
 									data-upgraded=",MaterialButton,MaterialRipple"
+									data-toggle="modal"
+									data-target="#modalImdbRestApi"
+									data-backdrop="false"
 									>VIDEO DEMO<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span
 								></a>
 								<a
@@ -483,7 +493,7 @@
 								</div>
 							</div>
 							<div class="mdl-card__title">
-								<h2 class="mdl-card__title-text text-capitalize">application mobile social</h2>
+								<h2 class="mdl-card__title-text text-capitalize">application mobile sociale</h2>
 							</div>
 							<div class="mdl-card__supporting-text">
 								Application android qui intégre l'API Google Maps et qui permet aux utilisateurs de:
@@ -525,7 +535,7 @@
 						</div>
 						<!-- /android map app-->
 
-						<!-- univ site-->
+						<!-- universities site-->
 						<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" id="universities-website">
 							<div class="mdl-card__media">
 								<div id="carouselExampleFadeUnivSite" class="carousel slide carousel-fade" data-ride="carousel">
@@ -589,10 +599,13 @@
 							</div>
 							<div class="mdl-card__actions mdl-card--border">
 								<a
-									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent showVideoDialog"
+									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
 									rel="noreferrer noopener"
 									type="button"
 									data-upgraded=",MaterialButton,MaterialRipple"
+									data-toggle="modal"
+									data-target="#modalUniversitiesWebsite"
+									data-backdrop="false"
 									>VIDEO DEMO<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span
 								></a>
 								<a
@@ -604,7 +617,7 @@
 								>
 							</div>
 						</div>
-						<!-- /univ site-->
+						<!-- /universities site-->
 					</div>
 				</div>
 
@@ -645,108 +658,96 @@
 			</main>
 		</div>
 
-		<!-- modals -->
-		<dialog class="mdl-dialog videoDialog">
-			<!-- <h4 class="mdl-dialog__title">Allow data collection?</h4> -->
-			<div class="mdl-dialog__content">
-				<video controls width="100%" height="auto" class="video" poster="./assets/videos/chat-app.png">
-					<source src="./assets/videos/chat-app.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+		<div class="modal fade" id="modalChatApp" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video controls width="100%" height="auto" class="video" poster="./assets/videos/chat-app.png">
+							<source src="./assets/videos/chat-app.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
 			</div>
-			<div class="mdl-dialog__actions">
-				<button type="button" class="mdl-button closeVideoDialog">close</button>
-			</div>
-		</dialog>
+		</div>
 
-		<dialog class="mdl-dialog videoDialog">
-			<!-- <h4 class="mdl-dialog__title">Allow data collection?</h4> -->
-			<div class="mdl-dialog__content">
-				<video controls width="100%" height="auto" class="video" poster="./assets/videos/social-network.png">
-					<source src="./assets/videos/social-network.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+		<div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video controls width="100%" height="auto" class="video" poster="./assets/videos/social-network.png">
+							<source src="./assets/videos/social-network.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
 			</div>
-			<div class="mdl-dialog__actions">
-				<button type="button" class="mdl-button closeVideoDialog">close</button>
-			</div>
-		</dialog>
+		</div>
 
-		<dialog class="mdl-dialog videoDialog">
-			<!-- <h4 class="mdl-dialog__title">Allow data collection?</h4> -->
-			<div class="mdl-dialog__content">
-				<video controls width="100%" height="auto" class="video" poster="./assets/videos/pathfinding-visualisation.png">
-					<source src="./assets/videos/pathfinding-visualisation.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+		<div class="modal fade" id="modalPathfindingVisualisation" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video controls width="100%" height="auto" class="video" poster="./assets/videos/pathfinding-visualisation.png">
+							<source src="./assets/videos/pathfinding-visualisation.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
 			</div>
-			<div class="mdl-dialog__actions">
-				<button type="button" class="mdl-button closeVideoDialog">close</button>
-			</div>
-		</dialog>
+		</div>
 
-		<dialog class="mdl-dialog videoDialog">
-			<!-- <h4 class="mdl-dialog__title">Allow data collection?</h4> -->
-			<div class="mdl-dialog__content">
-				<video controls width="100%" height="auto" class="video" poster="./assets/videos/imdb-rest-api.png">
-					<source src="./assets/videos/imdb-rest-api.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+		<div class="modal fade" id="modalImdbRestApi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video controls width="100%" height="auto" class="video" poster="./assets/videos/imdb-rest-api.png">
+							<source src="./assets/videos/imdb-rest-api.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
 			</div>
-			<div class="mdl-dialog__actions">
-				<button type="button" class="mdl-button closeVideoDialog">close</button>
-			</div>
-		</dialog>
+		</div>
 
-		<dialog class="mdl-dialog videoDialog">
-			<!-- <h4 class="mdl-dialog__title">Allow data collection?</h4> -->
-			<div class="mdl-dialog__content">
-				<video controls width="100%" height="auto" class="video" poster="./assets/videos/universities-website.png">
-					<source src="./assets/videos/universities-website.mp4" type="video/mp4" />
-					Your browser does not support the video tag.
-				</video>
+		<div class="modal fade" id="modalUniversitiesWebsite" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video controls width="100%" height="auto" class="video" poster="./assets/videos/universities-website.png">
+							<source src="./assets/videos/universities-website.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
 			</div>
-			<div class="mdl-dialog__actions">
-				<button type="button" class="mdl-button closeVideoDialog">close</button>
-			</div>
-		</dialog>
-		<!-- /modals -->
+		</div>
 
-		<script src="node_modules/dialog-polyfill/dist/dialog-polyfill.js"></script>
 		<script>
-			// import dialogPolyfill from "./node_modules/dialog-polyfill/dist/dialog-polyfill.esm.js"
+			let closeModalBtns = document.querySelectorAll(".closeModal")
+			let videos = document.querySelectorAll(".video")
 
-			const showVideoDialogBtns = document.querySelectorAll(".showVideoDialog")
-			const dialogs = document.querySelectorAll(".videoDialog")
-			const videos = document.querySelectorAll(".video")
-			const closeVideoDialogBtns = document.querySelectorAll(".closeVideoDialog")
-
-			// console.log(videos[0])
-
-			for (let i = 0; i < dialogs.length; i++) {
-				if (!dialogs[i].showModal) {
-					dialogPolyfill.registerDialog(dialogs[i])
-				}
-			}
-
-			for (let i = 0; i < showVideoDialogBtns.length; i++) {
-				showVideoDialogBtns[i].addEventListener("click", (e) => {
-					e.preventDefault()
-					dialogs[i].showModal()
-					// console.log(dialogs[i])
-				})
-			}
-
-			for (let i = 0; i < closeVideoDialogBtns.length; i++) {
-				// const v = videos
-				closeVideoDialogBtns[i].addEventListener("click", (e) => {
-					// console.log(i)
+			for (let i = 0; i < closeModalBtns.length; i++) {
+				closeModalBtns[i].addEventListener("click", (e) => {
 					videos[i].pause()
-					dialogs[i].close()
+					// console.log(i)
 				})
 			}
 		</script>
-
-		<!-- <script src="assets/js/handleModals.js"></script> -->
 	</body>
 </html>
