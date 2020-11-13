@@ -20,6 +20,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/styles.css" />
 
+		<link rel="stylesheet" type="text/css" href="node_modules/dialog-polyfill/dist/dialog-polyfill.css" />
+
 		<script src="assets/js/jquery-3.5.0.js" defer></script>
 		<script src="assets/js/popper.min.js" defer></script>
 		<script src="assets/js/bootstrap.min.js" defer></script>
@@ -710,8 +712,9 @@
 		</dialog>
 		<!-- /modals -->
 
-		<script type="module">
-			import dialogPolyfill from "./node_modules/dialog-polyfill/dist/dialog-polyfill.esm.js"
+		<script src="node_modules/dialog-polyfill/dist/dialog-polyfill.js"></script>
+		<script>
+			// import dialogPolyfill from "./node_modules/dialog-polyfill/dist/dialog-polyfill.esm.js"
 
 			const showVideoDialogBtns = document.querySelectorAll(".showVideoDialog")
 			const dialogs = document.querySelectorAll(".videoDialog")
