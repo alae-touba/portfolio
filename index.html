@@ -460,6 +460,59 @@
 							</div>
 						</div>
 						<!-- /imdb rest api-->
+
+						<!-- sorting visualisation -->
+						<div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card" id="sorting-visualisation">
+							<div class="mdl-card__media">
+								<img class="article-image" src="assets/img/apps/sorting-visualisation.png" alt="visualiseur d'algorithmes img" />
+							</div>
+							<div class="mdl-card__title">
+								<h2 class="mdl-card__title-text text-capitalize">visualiseur d'algorithmes de tri</h2>
+							</div>
+							<div class="mdl-card__supporting-text">
+								Les algos de recherche de chemin abordent le problème de trouver le chemin le plus court d'une source à une
+								destination. Cette app visualise:
+								<ul>
+									<li>l'algorithme de Dijkstra</li>
+									<li>breath First Search</li>
+									<li>depth First Search</li>
+									<li>l'algorithme de Bellman-Ford</li>
+								</ul>
+							</div>
+							<div class="mdl-card__actions mdl-card--border mdl-card__end">
+								<ul class="tech-icon-container">
+									<li class="language-icon-inner tech-icon-wrapper small-margin">
+										<img class="tech-icon" src="assets/img/tech-icons/html5.svg" alt="HTML" />
+									</li>
+									<li class="language-icon-inner tech-icon-wrapper small-margin">
+										<img class="tech-icon" src="assets/img/tech-icons/css3.svg" alt="CSS" />
+									</li>
+									<li class="language-icon-inner tech-icon-wrapper small-margin">
+										<img class="tech-icon" src="assets/img/tech-icons/js.png" alt="Javascript" />
+									</li>
+								</ul>
+							</div>
+							<div class="mdl-card__actions mdl-card--border">
+								<a
+									class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+									rel="noreferrer noopener"
+									type="button"
+									data-upgraded=",MaterialButton,MaterialRipple"
+									data-toggle="modal"
+									data-target="#modalSortingVisualisation"
+									data-backdrop="false"
+									>VIDEO DEMO<span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span
+								></a>
+								<a
+									class="repo-btn mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+									href="https://github.com/alae-touba/sorting-visualisation"
+									target="_blank"
+									rel="noreferrer noopener"
+									>GITHUB</a
+								>
+							</div>
+						</div>
+						<!-- /sorting visualisation-->
 					</div>
 				</div>
 
@@ -712,6 +765,22 @@
 					<div class="modal-body">
 						<video controls width="100%" height="auto" class="video" poster="./assets/videos/imdb-rest-api.png">
 							<source src="./assets/videos/imdb-rest-api.mp4" type="video/mp4" />
+							Your browser does not support the video tag.
+						</video>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger closeModal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="modalSortingVisualisation" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<video controls width="100%" height="auto" class="video" poster="./assets/videos/sorting-visualisation.png">
+							<source src="./assets/videos/sorting-visualisation.mp4" type="video/mp4" />
 							Your browser does not support the video tag.
 						</video>
 					</div>
